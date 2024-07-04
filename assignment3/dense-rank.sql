@@ -1,3 +1,4 @@
+--Dense rank of courses based on their enrollment count across all students
 SELECT
     c.course_id,
     c.course_name,
