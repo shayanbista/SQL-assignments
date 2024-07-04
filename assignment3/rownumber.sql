@@ -1,3 +1,4 @@
+--all students along with a row number based on their enrollment date in ascending order.
 SELECT 
     student_name, 
     enrollment_date,
