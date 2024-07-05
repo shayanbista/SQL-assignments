@@ -99,7 +99,7 @@ LEFT JOIN "University".Courses c2 ON e2.course_id = c2.course_id AND c2.course_n
 WHERE c1.course_name = 'Introduction to CS'
   AND c2.course_id IS NULL;
 
---
+--row number
 SELECT 
     student_name, 
     enrollment_date,
@@ -109,7 +109,7 @@ FROM
 JOIN 
     "University".Enrollments ON Students.student_id = Enrollments.student_id;
 
---
+--rank
 SELECT 
     student_name, 
     RANK() OVER (ORDER BY COUNT(course_id)DESC) AS rank
@@ -119,7 +119,7 @@ JOIN
     "University".Enrollments ON Students.student_id = Enrollments.student_id
 	GROUP BY Students.student_id;
 
---
+--dense_rank
 SELECT
     c.course_id,
     c.course_name,
